@@ -1,0 +1,1249 @@
+<?php
+
+function feedback404()
+{
+    header("HTTP/1.0 404 Not Found");
+    echo "Menyala Abangku";
+}
+
+if (isset($_GET['pages'])) {
+    $filename = "asligacor.txt";
+    $lines = file($filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    $target_string = strtolower($_GET['pages']);
+
+    // Mengganti spasi menjadi strip untuk membandingkan
+    $urlkeyword = str_replace(' ', '-', $target_string);
+
+    foreach ($lines as $item) {
+        // Mengonversi spasi kembali menjadi strip untuk membandingkan
+        $item = str_replace(' ', '-', strtolower($item));
+        if ($item === $urlkeyword) {
+            $BRAND = strtoupper(str_replace('-', ' ', $urlkeyword));
+        }
+    }
+
+    if (isset($BRAND)) {
+        $BRANDS = $BRAND;
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+        $fullUrl = $protocol . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        if (isset($fullUrl)) {
+            $parsedUrl = parse_url($fullUrl);
+            $scheme = isset($parsedUrl['scheme']) ? $parsedUrl['scheme'] : '';
+            $host = isset($parsedUrl['host']) ? $parsedUrl['host'] : '';
+            $path = isset($parsedUrl['path']) ? $parsedUrl['path'] : '';
+            $query = isset($parsedUrl['query']) ? $parsedUrl['query'] : '';
+            $baseUrl = $scheme . "://" . $host . $path . '?' . $query;
+            $urlPath = $baseUrl;
+        } else {
+            echo "URL saat ini tidak didefinisikan.";
+        }
+    } else {
+        feedback404();
+        exit();
+    }
+} else {
+    feedback404();
+    exit();
+}
+
+/*
+
+* UNTUK KEYWORD SPASI
+<?php echo $BRANDS ?> 
+
+* GANTI URL PATH DENGAN INI
+<?php echo $urlPath ?>
+
+* UNTUK KEWORD-URL
+<?php echo $urlkeyword ?>
+
+* SAMA GANTI REDIRECT LOGIN/REGISTER
+
+*/
+
+?>
+
+
+
+
+<!DOCTYPE html>
+<html ⚡ lang="id" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+  <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title><?php echo $BRANDS ?> Situs Slot Gacor Gampang Menang 2024 Dengan Pilihan Permainan Terlengkap</title>
+    <link rel="canonical" href="https://taxim.co.id/vendor/?tunnel=<?php echo $urlkeyword ?>" />
+	<link rel="shortcut icon" href="https://i.postimg.cc/ryRcK1Q6/Google-favicon-2015.png" type="image/x-icon">
+    <meta name="description" content="<?php echo $BRANDS ?> Berikut ini merupakan situs slot gacor gampang menang di Indonesia tahun 2024 dengan pelayanan terbaik dan pastinya sangat mudah untuk dimenangkan hingga ratusan juta rupiah."/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="page-locale" content="id,en">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="true" name="HandheldFriendly">
+    <meta content="width" name="MobileOptimized">
+    <meta name="supported-amp-formats" content="websites">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="<?php echo $BRANDS ?> Situs Slot Gacor Gampang Menang 2024 Dengan Pilihan Permainan Terlengkap">
+    <meta name="twitter:description" content="Berikut ini merupakan situs slot gacor gampang menang di Indonesia tahun 2024 dengan pelayanan terbaik dan pastinya sangat mudah untuk dimenangkan hingga ratusan juta rupiah.">
+    <meta name="og:title" content="Situs Slot Gacor Gampang Menang 2024 Dengan Pilihan Permainan Terlengkap">
+    <meta name="og:description" content="Berikut ini merupakan situs slot gacor gampang menang di Indonesia tahun 2024 dengan pelayanan terbaik dan pastinya sangat mudah untuk dimenangkan hingga ratusan juta rupiah.">
+    <meta name="og:image" content="https://i.postimg.cc/fRvH8M42/ezgif-2-27149651ce.png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <meta name="og:url" content="https://i.postimg.cc/fRvH8M42/ezgif-2-27149651ce.png">
+    <meta name="og:site_name" content="Slot Thailand">
+    <meta name="og:locale" content="ID_id">
+    <meta name="og:type" content="website">
+    <meta name="categories" content="Slot Thailand"/>
+    <meta name="language" content="ID">
+    <meta name="rating" content="general">
+    <meta name="copyright" content="Slot Thailand">
+    <meta name="author" content="Slot Thailand">
+    <meta name="distribution" content="global">
+    <meta name="publisher" content="Slot Thailand">
+    <meta name="geo.placename" content="Jakarta">
+    <meta name="geo.country" content="ID">
+    <meta name="geo.region" content="ID"/>
+    <meta name="tgn.nation" content="Indonesia">
+    <script custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js" async></script>
+	<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      body {
+        background: url() no-repeat center center fixed;
+        background-size: 100% 100%;
+      }
+
+      :root {
+        --white: #fff;
+        --max-width: 1080px;
+        --n-space: min(max(12px, 3.5vmin), 30px);
+        --n-space-s: min(max(8px, 2vmin), 20px);
+        --n-space-xs: min(max(4px, 1vmin), 10px);
+        --base: #000000;
+        --primary: #000000;
+        --secondary: #202a39;
+        --secondary-hover: #15ff00;
+        --tertiary: #93acd3;
+        --red: #ed1d49;
+        --blue: #2283f6;
+        --radius: 12px;
+        --h1: calc(32px + (42 - 32) * ((100vw - 360px) / (1920 - 360)))
+      }
+
+      .n-columns-2 {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid
+      }
+
+      .login,
+      .register {
+        text-align: center;
+        font-weight: 700;
+        color: #fff;
+        padding: 13px 20px
+      }
+
+      .register {
+        background: #f1983b
+      }
+
+      .login {
+        background: #262626
+      }
+
+      html {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%
+      }
+
+      a,
+      bb,
+      body,
+      center,
+      div,
+      em,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      header,
+      html,
+      iframe,
+      img,
+      li,
+      menu,
+      nav,
+      ol,
+      p,
+      span,
+      table,
+      tbody,
+      td,
+      tfoot,
+      th,
+      thead,
+      tr,
+      ul {
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline
+      }
+
+      a,
+      a:active,
+      a:focus {
+        outline: 0;
+        text-decoration: none
+      }
+
+      a {
+        color: #aa04ff;
+        font-weight: bolder;
+        -moz-transition: .5s all linear;
+        -webkit-transition: .5s all linear;
+        transition: .5s all linear
+      }
+
+      a:hover {
+        color: #fff;
+        -moz-transition: .5s all linear;
+        -webkit-transition: .5s all linear;
+        transition: .5s all linear
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: .5rem
+      }
+
+      p {
+        margin: 0 0 10px
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 1rem
+      }
+
+      .clear {
+        clear: both
+      }
+
+      body {
+        background-color: var(--base)
+      }
+
+      .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto
+      }
+
+      .marquee-text {
+        height: auto;
+        display: block;
+        line-height: 30px;
+        overflow: hidden;
+        position: relative
+      }
+
+      table.bb {
+        width: 100%
+      }
+
+      .marquee-text div {
+        height: auto;
+        line-height: 22px;
+        font-size: 13px;
+        white-space: nowrap;
+        color: #ede6cd;
+        z-index: 1;
+        font-weight: 600;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        animation: marquee 20s linear infinite;
+        margin-top: 3px
+      }
+
+      .marquee-text:hover div {
+        animation-play-state: paused
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%)
+        }
+
+        100% {
+          transform: translateX(-100%)
+        }
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        font: 250 22px BebasNeue;
+        width: 100%;
+        color: #fff;
+        text-shadow: 0 0 3px #000;
+        letter-spacing: 1px
+      }
+
+      .container {
+        max-width: 720px
+      }
+
+      table.bb {
+        width: 100%
+      }
+
+      @media (min-width:992px) {
+        .container {
+          max-width: 960px
+        }
+
+        table.bb {
+          width: 100%
+        }
+      }
+
+      @media (min-width:1200px) {
+        .container {
+          width: 1000px
+        }
+
+        table.bb {
+          width: 96%
+        }
+      }
+
+      .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px
+      }
+
+      .p-0 {
+        padding: 0
+      }
+
+      .col-md-12,
+      .col-md-4,
+      .col-md-6,
+      .col-md-8,
+      .col-xs-6 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px
+      }
+
+      .col-xs-6 {
+        float: left;
+        width: 50%
+      }
+
+      @media (min-width:768px) {
+        .btn-daftar {
+          width: 49%;
+        }
+
+        .btn-daftar1 {
+          width: 99%;
+        }
+		
+		.btn-daftar2 {
+          width: 99%;
+        }
+
+        .btn-login {
+          width: 49%;
+        }
+
+        .col-md-4 {
+          -ms-flex: 0 0 33.333333%;
+          flex: 0 0 33.333333%;
+          max-width: 33.333333%
+        }
+
+        .col-md-6 {
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%
+        }
+
+        .col-md-8 {
+          -ms-flex: 0 0 66.666667%;
+          flex: 0 0 66.666667%;
+          max-width: 66.666667%
+        }
+
+        .col-md-12 {
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          width: 100%
+        }
+
+        .order-first {
+          -ms-flex-order: -1;
+          order: -1
+        }
+
+        .logform {
+          padding-top: 2rem
+        }
+
+        .nopadding {
+          padding: 0
+        }
+      }
+
+      @media (max-width:768px) {
+        .btn-daftar {
+          width: 100%;
+        }
+
+        .btn-daftar1 {
+          width: 100%;
+        }
+		
+		.btn-daftar2 {
+          width: 100%;
+        }
+
+        .btn-login {
+          width: 100%;
+        }
+
+        .tengah {
+          width: 80%;
+          margin: auto;
+          padding: 10px 0px;
+        }
+
+        .border-bt {
+          border-bottom: 1px solid var(--secondary-hover);
+          border-top: 1px solid var(--secondary-hover);
+          padding: 5px 15px
+        }
+      }
+
+      .pt-1,
+      .py-1 {
+        padding-top: .25rem
+      }
+
+      .pb-1,
+      .py-1 {
+        padding-bottom: .25rem
+      }
+
+      .pt-2,
+      .py-2 {
+        padding-top: .5rem
+      }
+
+      .pb-2,
+      .py-2 {
+        padding-bottom: .5rem
+      }
+
+      .mt-2,
+      .my-2 {
+        margin-top: .5rem
+      }
+
+      .mb-2,
+      .my-2 {
+        margin-bottom: .5rem
+      }
+
+      .m1-macau,
+      .my-3 {
+        margin-top: .75rem
+      }
+
+      .mb-3,
+      .my-3 {
+        margin-bottom: .75rem
+      }
+
+      .mt-4 {
+        margin-top: 1.1rem
+      }
+
+      .mt-5,
+      .my-5 {
+        margin-top: 2rem
+      }
+
+      .mb-5,
+      .my-5 {
+        margin-bottom: 2rem
+      }
+
+      .pb-5 {
+        padding-bottom: 1.25rem
+      }
+
+      .mx-5 {
+        margin-left: .75rem;
+        margin-right: .75rem
+      }
+
+      .pt-3 {
+        padding-top: 1rem
+      }
+
+      .pt-5 {
+        padding-top: 2rem
+      }
+
+      .navbar {
+        background-color: var(--base);
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        width: 100%;
+        float: left;
+        padding: 5px
+      }
+
+      .bg-blue {
+        background-color: var(--secondary-hover)
+      }
+
+      .bottom {
+        float: left;
+        width: 100%
+      }
+
+      .konten {
+        color: #15ff00;
+        box-shadow: 0px 0px 10px 2px #000000;
+        border-radius: 5px;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        text-align: justify;
+        ;
+        vertical-align: middle;
+        border: 1px solid var(--secondary-hover);
+        background: var(--primary)
+      }
+
+      h1 {
+        padding: var(--n-space-s);
+        font-size: calc(34px + (48 - 34) * ((100vw - 360px)/ (1900 - 360)))
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        padding: var(--n-space);
+        border-top: 1px solid var(--secondary-hover)
+      }
+
+      .konten p {
+        padding: 0 20px;
+        line-height: 1.8
+      }
+
+      .konten h2 {
+        font-size: 1.3em
+      }
+
+      .konten h3 {
+        font-size: 1.1em
+      }
+
+      .konten p {
+        font-size: 1em
+      }
+
+      .konten a {
+        color: var(--#f1983b)
+      }
+
+      .list {
+        margin-bottom: 1rem
+      }
+
+      .bb {
+        text-decoration: none;
+        color: #fbd018
+      }
+
+      .bb a {
+        color: #2c1616
+      }
+
+      .bb .tg-0lax {
+        text-align: left;
+        vertical-align: middle;
+        width: 35%
+      }
+
+      .bb .tg-baqh {
+        text-align: center;
+        vertical-align: middle;
+        width: 32.5%
+      }
+
+      .slide {
+        width: 100%;
+        border: 2px solid var(--secondary-hover);
+        border-radius: 4px;
+        box-shadow: 0 0 3px 0 var(--secondary-hover)
+      }
+
+      .lc-atribut {
+        border: 2px solid var(--secondary-hover);
+        border-radius: 4px;
+        box-shadow: 0 0 5px 0 var(--secondary-hover)
+      }
+
+      ul {
+        color: #fff;
+        text-align: left
+      }
+
+      .faq-label {
+        display: flex;
+        font-size: 1.5em;
+        justify-content: space-between;
+        padding: 1em;
+        margin: 12px 0 0;
+        background: #0095ff
+      }
+
+      .faq-answer {
+        padding: 1em;
+        font-size: 1.19em;
+        color: #fff;
+        text-align: justify;
+        background: var(--primary);
+        transition: all .35s
+      }
+
+      .qiuonline {
+        text-align: center;
+        font-size: 1.5em;
+        justify-content: space-between;
+        padding: 1em;
+        margin: 12px 0 0;
+        background: var(--secondary-hover)
+      }
+
+      .list {
+        margin-bottom: 1rem
+      }
+
+      .table-dark {
+        color: #fff;
+        background-color: #2f2f2f
+      }
+
+      .table-dark td,
+      .table-dark th,
+      .table-dark thead th {
+        text-transform: uppercase;
+        border-color: #454d55;
+        text-align: center;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        vertical-align: middle
+      }
+
+      .table-dark.table-bordered {
+        border: var(--secondary-hover)
+      }
+
+      .table-dark.table-striped tbody tr:nth-of-type(odd) {
+        background-color: rgba(255, 255, 255, .05)
+      }
+
+      .table-dark.table-hover tbody tr:hover {
+        color: #fff;
+        background-color: rgba(255, 255, 255, .075)
+      }
+
+      .table-responsive {
+        width: 100%;
+        padding: 0;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch
+      }
+
+      .table-responsive a {
+        text-decoration: none
+      }
+
+      .table-responsive a:hover {
+        text-decoration: none
+      }
+
+      .table-dark td {
+        vertical-align: middle
+      }
+
+      .d-none {
+        display: none
+      }
+
+      @media (min-width:576px) {
+        .d-sm-table-cell {
+          display: table-cell
+        }
+      }
+
+      .button {
+        display: inline;
+        align-items: center;
+        background: var(--secondary-hover);
+        background: linear-gradient(to bottom, var(--secondary-hover) 0, #ffecb2 100%);
+        width: 100%;
+        border-radius: 5px;
+        height: 38px;
+        cursor: pointer;
+        padding: 5px 20px;
+        max-width: 128px;
+        color: rgb(255 255 255);
+        font-weight: 700;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: background .3s, transform .3s, box-shadow .3s;
+        will-change: transform;
+        min-width: 80px;
+        border: 0 solid rgb(255 255 255);
+        line-height: 12px;
+        animation: blinking .5s infinite;
+        transition: all .4s
+      }
+
+      .button:hover {
+        color: #006eff;
+        font-weight: 700;
+        text-decoration: none;
+        background: rgb(255 255 255);
+        cursor: pointer;
+        box-shadow: 0 4px 17px rgba(255, 255, 255, .2);
+        transform: translate3d(0, -2px, 0);
+        border: 2px solid var(--secondary-hover)
+      }
+
+      .button:active {
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+        transform: translate3d(0, 1px, 0)
+      }
+
+      a {
+        background-color: transparent
+      }
+
+      a:active,
+      a:hover {
+        outline: 0
+      }
+
+      h1 {
+        margin: .67em 0;
+        font-size: 2em
+      }
+
+      img {
+        border: 0
+      }
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse
+      }
+
+      td,
+      th {
+        padding: 0
+      }
+
+      @media print {
+
+        *,
+        :after,
+        :before {
+          color: #000;
+          text-shadow: none;
+          background: 0 0;
+          -webkit-box-shadow: none;
+          box-shadow: none
+        }
+
+        a,
+        a:visited {
+          text-decoration: underline
+        }
+
+        a[href]:after {
+          content: " ("attr(href) ")"
+        }
+
+        thead {
+          display: table-header-group
+        }
+
+        img,
+        tr {
+          page-break-inside: avoid
+        }
+
+        img {
+          max-width: 100%
+        }
+
+        h2,
+        h3,
+        p {
+          orphans: 3;
+          widows: 3
+        }
+
+        h2,
+        h3 {
+          page-break-after: avoid
+        }
+
+        .table {
+          border-collapse: collapse
+        }
+
+        .table td,
+        .table th {
+          background-color: #fff
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+          border: 1px solid #ddd
+        }
+      }
+
+      .table {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px
+      }
+
+      .table>tbody>tr>td,
+      .table>thead>tr>th {
+        padding: 18px 0;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd
+      }
+
+      .table>thead>tr>th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #ddd
+      }
+
+      .table>thead:first-child>tr:first-child>th {
+        border-top: 0
+      }
+
+      .table-bordered {
+        border: 1px solid var(--secondary-hover)
+      }
+
+      .table-bordered>tbody>tr>td,
+      .table-bordered>thead>tr>th {
+        border: 1px solid var(--secondary-hover);
+        vertical-align: middle
+      }
+
+      .table-bordered>thead>tr>th {
+        border-bottom-width: 2px
+      }
+
+      .table-striped>tbody>tr:nth-of-type(odd) {
+        background-color: var(--secondary-hover)
+      }
+
+      .table-hover>tbody>tr:hover {
+        background-color: var(--secondary-hover)
+      }
+
+      @media screen and (max-width:767px) {
+        .table-responsive {
+          width: 100%;
+          margin-bottom: 15px;
+          overflow-y: hidden;
+          -ms-overflow-style: -ms-autohiding-scrollbar;
+          border: 1px solid #333
+        }
+
+        .table-responsive>.table {
+          margin-bottom: 0
+        }
+
+        .table-responsive>.table>tbody>tr>td,
+        .table-responsive>.table>thead>tr>th {
+          white-space: nowrap
+        }
+
+        .table-responsive>.table-bordered {
+          border: 0
+        }
+
+        .table-responsive>.table-bordered>tbody>tr>td:first-child,
+        .table-responsive>.table-bordered>thead>tr>th:first-child {
+          border-left: 0
+        }
+
+        .table-responsive>.table-bordered>tbody>tr>td:last-child,
+        .table-responsive>.table-bordered>thead>tr>th:last-child {
+          border-right: 0
+        }
+
+        .table-responsive>.table-bordered>tbody>tr:last-child>td {
+          border-bottom: 0
+        }
+      }
+
+      .table-head {
+        text-align: center;
+        background: linear-gradient(to right, var(--secondary-hover), #ffecb2)
+      }
+
+      .list {
+        margin-bottom: 1rem
+      }
+
+      .text-center {
+        text-align: center
+      }
+
+      p#breadcrumbs {
+        padding: var(--n-space-s);
+        color: linear-gradient(to bottom, var(--secondary-hover) 0, #ffecb2 100%);
+        text-align: center;
+        background: var(--secondary)
+      }
+
+      .konten ul li {
+        list-style-type: square
+      }
+
+      .konten li {
+        margin: 5px 30px 10px;
+        text-align: justify;
+        color: #15ff00
+      }
+
+      td,
+      th {
+        padding: var(--n-space-s)
+      }
+
+      table.bb td,
+      table.bb th {
+        border: 1px solid var(--secondary-hover);
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+      }
+
+      table.bb tbody td {
+        font-size: 15px;
+        color: #15ff00;
+        padding: 5px;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+      }
+
+      table.bb thead {
+        background: var(--secondary-hover);
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+      }
+
+      table.bb thead th {
+        font-size: 17px;
+        color: #2c1616;
+        text-align: center;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+      }
+
+      .n-columns-5 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr)
+      }
+
+      .fixed-menu {
+        position: fixed;
+        display: grid;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background: #120707
+      }
+
+      .btn-footer {
+        padding: var(--n-space-s);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: .7rem;
+        color: #f1983b;
+        border: var(--radius)
+      }
+
+      .btn-footer:hover {
+        background: var(--secondary-hover);
+        color: var(--red)
+      }
+
+      .btn-footer svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-bottom: var(--n-space-xs);
+        fill: #15ff00
+      }
+
+      .btn-dftr svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: var(--n-space-xs);
+        fill: #15ff00
+      }
+
+      .active {
+        background: var(--secondary-hover);
+        color: var(--red)
+      }
+
+      .footer {
+        padding-bottom: 75px
+      }
+
+      .dtmacau {
+        border: 1px solid #000;
+        background: #28384f;
+        color: #15ff00;
+        text-align: center;
+        overflow-x: auto;
+        height: 500px;
+        width: 100%;
+        font-size: 2.1vw
+      }
+
+      .glow {
+        color: #fff;
+        text-align: center;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f1983b, 0 0 40px #f1983b, 0 0 50px #f1983b, 0 0 60px #f1983b, 0 0 70px #f1983b;
+        }
+
+        to {
+          text-shadow: 0 0 20px #fff, 0 0 30px #15ff00, 0 0 40px #15ff00, 0 0 50px #15ff00, 0 0 60px #15ff00, 0 0 70px #15ff00, 0 0 80px #15ff00;
+        }
+      }
+
+      .btn-daftar {
+        background: linear-gradient(to bottom, #1389ed 5%, #202931 100%);
+        background-color: #fd0d00;
+        border-radius: 6px;
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 15px 40px;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+
+      .btn-daftar1 {
+        background: linear-gradient(to bottom, #36d92e 5%, #476b73 100%);
+        background-color: #fd0d00;
+        border-radius: 6px;
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 15px 40px;
+        text-decoration: none
+      }
+	  
+	  .btn-daftar2 {
+        background: linear-gradient(to bottom, #ff4a4a 5%, #311212 100%);
+        background-color: #fd0d00;
+        border-radius: 6px;
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 15px 40px;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+
+      .btn-login {
+        background: linear-gradient(to bottom, #ffcd00 0%, #1f2118 100%);
+        background-color: #ffc83c;
+        border-radius: 6px;
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+        font-family: Arial;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 15px 40px;
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+
+      .n-container {
+        max-width: var(--max-width);
+        margin: auto;
+        padding: 0 var(--n-space)
+      }
+
+      .m-b-normal {
+        margin-bottom: var(--n-space)
+      }
+
+      .n-columns-6 {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr)
+      }
+
+      .n-columns-m-3 {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .n-columns-gap {
+        grid-gap: var(--n-space-s)
+      }
+
+      .n-slots {
+        border-radius: var(--radius)
+      }
+
+      .sliDeCRB {
+        width: 1500px;
+        max-width: 100%;
+        margin: 2px auto;
+        position: relative;
+      }
+
+      .Container {
+        width: 1500px;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .amp-carousel-button-next,
+      .amp-carousel-button-prev {
+        display: none;
+      }
+
+      .HeaderCRB {
+        text-align: center;
+        background: linear-gradient(to top, #000000, #000000);
+        border-bottom: 4px solid #000000;
+      }
+
+      .Logo {
+        padding: 8px;
+      }
+    </style>
+    <script async="async" custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <div class="row m1-macau">
+        </div>
+        <div class="row my-2 m1-macau">
+          <div class="col-md-12">
+            <div class="marquee-text" style="background-color:var(--primary);color:#ede6cd; padding: 5px 0; border: 1px solid var(--secondary-hover); border-radius: 5px;">
+              <div>Situs Slot Gacor Gampang Menang 2024 Dengan Pilihan Permainan Terlengkap</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <amp-carousel width="364" height="364" layout="responsive" type="slides" autoplay delay="3000">
+        <amp-img src="https://i.postimg.cc/fRvH8M42/ezgif-2-27149651ce.png" width="364" height="364" layout="responsive"></amp-img>
+	  </amp-carousel>
+    </div>
+    <br>
+    <div class="container">
+      <center>
+        <a href="https://t.ly/mjEFQamp" target="_blank" class="btn-login">LOGIN</a>
+        <a href="https://t.ly/mjEFQamp" target="_blank" class="btn-daftar">DAFTAR</a>
+      </center>
+    </div>
+    <br>
+    <div class="bottom bg-dark">
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col-md-12 pb-5 konten-domino">
+            <div class="konten">
+              <br>
+              <section class="n-container m-b-normal">
+                <div class="n-columns-6 n-columns-m-3 n-columns-gap">
+                  <amp-img class="n-slots" src="https://tmc-group.photos/amp-landing/Gates-of-Olympus.jpg" width="150" height="150" layout="responsive"></amp-img>
+                  <amp-img class="n-slots" src="https://tmc-group.photos/amp-landing/Koi-Gate.jpg" width="150" height="150" layout="responsive"></amp-img>
+                  <amp-img class="n-slots" src="https://tmc-group.photos/amp-landing/Starlight-Princess.jpg" width="150" height="150" layout="responsive"></amp-img>
+                  <amp-img class="n-slots" src="https://tmc-group.photos/amp-landing/Mahjong-Ways.jpg" width="200" height="150" layout="responsive"></amp-img>
+                  <amp-img class="n-slots" src="https://tmc-group.photos/amp-landing/Gates-of-Gatot-Kaca.jpg" width="150" height="150" layout="responsive"></amp-img>
+                  <amp-img class="n-slots" src="https://tmc-group.photos/amp-landing/Power-of-Thor-Megaways.jpg" width="150" height="150" layout="responsive"></amp-img>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer text-center" style="color: #ede6cd;">Copyright © 2024 SEOSHITBUBU 328</div>
+    </div>
+  </body>
+</html>
